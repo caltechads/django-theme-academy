@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include academy_theme/static *
+recursive-include academy_theme/templates *

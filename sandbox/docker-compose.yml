@@ -1,0 +1,41 @@
+---
+version: "3.8"
+
+services:
+  demo:
+    image: academy_theme_demo:latest
+    user: root
+    container_name: academy_theme_demo
+    restart: always
+    hostname: academy_theme_demo
+    environment:
+      - DEBUG=True
+    ports:
+      - "443:443"
+    depends_on:
+      - mysql
+    volumes:
+      # Mounts the repo into the container, so that local changes will be picked
+      # up without rebuilding.
+      - .:/app
+      - ../academy_theme:/ve/lib/python3.10/site-packages/academy_theme
+
+  mysql:
+    image: mysql:8.0.23
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+    cap_add:
+      # removes error messages like: mbind: Operation not permitted
+      - SYS_NICE
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./sql/docker/my.cnf:/etc/mysql/conf.d/dev.cnf
+      - ./sql/docker:/docker-entrypoint-initdb.d
+      - academy_demo_data:/var/lib/mysql
+
+volumes:
+  # The Docker volume in which the database's files are stored. Works in tandem
+  # with the "academy_demo_data:/var/lib/mysql" volume mount defined above.
+  academy_demo_data:

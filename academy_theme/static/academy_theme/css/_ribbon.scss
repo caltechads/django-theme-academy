@@ -1,0 +1,41 @@
+/* ======================================
+   The grey ribbon at the top of the page
+   ====================================== */
+
+.ribbon_bar {
+  border-bottom: 1px solid #ccc;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(234,234,234,1) 80%, rgba(224,224,224,1) 100%);
+  // Only reason #ribbon is set to position: relative to is to make z-index work.
+  position: relative;
+  z-index: $float_z + 1;
+  &__content {
+    min-height: $ribbon_height;
+    &__links {
+      @include all-caps-horizontal-links();
+      font-size: 0.78571429em;
+      a {margin-left: 10px;}
+    }
+    &__login {
+      color: $color-black-text;
+      font-size: 1.3rem;
+    }
+    &__username {
+      display: block;
+      color: $color-black-text;
+    }
+
+    &__breadcrumbs {
+      .breadcrumb-item + .breadcrumb-item::before {
+         color: $color-black-text;
+       }
+       .breadcrumb-item.active a {
+         pointer-events: auto !important;
+         text-decoration: none;
+       }
+       .breadcrumb-item:not(.active) {
+         font-weight: bold;
+       }
+    }
+  }
+}

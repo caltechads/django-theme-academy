@@ -1,0 +1,50 @@
+.btn-primary {
+    background-color: $color-orange-accessible !important;
+}
+
+/* ==================
+   Page
+   ================== */
+
+.page {
+  // Make .page take up as much vertical space as possible in the
+  // viewport, pushing the footer to the bottom.  That's what the "1"
+  // below does.
+
+  display: flex;
+
+  &__content {
+    flex: 1 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+.pagination .active a {
+  background-color: $color-orange-accessible !important;
+}
+
+/* ==================
+   Page Footer
+   ================== */
+
+.footer {
+  border-top: 1px solid #ccc;
+  background: rgb(244,244,244);
+  font-size: 0.8rem;
+
+  &__content {
+    &__contact {
+      line-height: 1.4;
+      color: $color-black-text;
+      a, a:visited {
+        color: $color-black-text;
+      }
+    }
+
+    &__links {
+      @include all-caps-horizontal-links();
+    }
+  }
+}
