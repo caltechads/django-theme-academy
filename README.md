@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'academy_theme',
     ...
 ]
+```
 
 Add the custom template context processor:
 
@@ -44,7 +45,6 @@ TEMPLATES = [
             ],
         },
     },
-    }
 ]
 ```
 
