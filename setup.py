@@ -10,6 +10,7 @@ setup(
     include_package_data=True,
     package_data={'academy_theme': ["py.typed"]},
     install_requires=[
+        "django-wildewidgets >= 0.13.49"
     ],
     author="Caltech IMSS ADS",
     author_email="imss-ads-staff@caltech.edu",
