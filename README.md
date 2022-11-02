@@ -64,7 +64,7 @@ ACADEMY_THEME_SETTINGS = {
     'ORGANIZATION_LINK': 'https://myorg.com',
     'ORGANIZATION_NAME': 'Organization Name',
     'ORGANIZATION_ADDRESS': 'Organization Address',
-    'COPYWRITE_ORGANIZATION': 'Copyright Organization'
+    'COPYRIGHT_ORGANIZATION': 'Copyright Organization'
     'FOOTER_LINKS': []
 }
 ```
