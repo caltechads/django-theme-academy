@@ -3,8 +3,6 @@
 
 from typing import List, Tuple
 
-from django.templatetags.static import static
-
 from academy_theme.wildewidgets import AcademyThemeMainMenu
 
 

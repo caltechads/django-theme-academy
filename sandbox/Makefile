@@ -2,7 +2,7 @@ VERSION = 0.1.0
 
 PACKAGE = academy_theme_demo
 
-.PHONY: clean dist build force-build tag dev dev-detached devup devdown logall log exec restart docker-clean docker-destroy-db docker-destroy list
+.PHONY: clean dist build force-build tag dev dev-detached devup devdown logall log exec restart docker-clean docker-destroy-db docker-destroy list package
 #======================================================================
 
 clean:
@@ -13,11 +13,11 @@ clean:
 dist: clean
 	@python setup.py sdist
 
-package_theme:
+package:
 	(cd ..; python setup.py sdist)
 	cp ../dist/django-theme-academy-${VERSION}.tar.gz django-theme-academy.tar.gz
 
-build: package_theme
+build: package
 	docker build -t ${PACKAGE}:${VERSION} .
 	docker tag ${PACKAGE}:${VERSION} ${PACKAGE}:latest
 	docker image prune -f

@@ -104,6 +104,7 @@ THIRD_PARTY_APPS = [
     'academy_theme',
     'crispy_forms',
     'wildewidgets',
+    'book_manager'
 ]
 LOCAL_APPS = [
     'demo.users',

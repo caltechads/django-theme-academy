@@ -10,6 +10,8 @@ services:
     hostname: academy_theme_demo
     environment:
       - DEBUG=True
+      - DEVELOPMENT=True
+      - DISABLE_CACHE=True
     ports:
       - "443:443"
     depends_on:

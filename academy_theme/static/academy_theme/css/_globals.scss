@@ -3,12 +3,6 @@
 $color-white:                #ffffff;
 $color-black:                #000000;
 
-// Primary Colors
-$color-orange:               #ff6c0c;
-$color-orange-accessible:    #D14900;
-$color-primary:              $color-orange-accessible;
-$color-primary-accessible:   $color-orange-accessible;
-
 // new colors
 $color-ltgray:                  #c8c8c8;
 $color-gray:                    #aaa99f;
@@ -105,13 +99,6 @@ $float_z:                 500;
 :root {
   // increase the base font-size so old folk like me can read it
   font-size: 18px !important;
-
-  // make bare links in our tables be orange
-  table tr td {
-    a:not(.btn), a:not(.btn):hover, a:not(.btn):visited {
-      color: $color-primary-accessible;
-    }
-  }
 
   // give text in disabled form fields some left padding
   .form-control-plaintext {

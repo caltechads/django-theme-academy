@@ -68,20 +68,20 @@
 }
 
 .bg-ribbon {
-  background: #3c4f82;
+  background: #eaeaea;
 }
 
 .text-ribbon {
-  color: #3c4f82 !important;
+  color: #eaeaea !important;
 }
 
 .bg-ribbon-lt {
-  color: #3c4f82 !important;
-  background: rgba(60, 79, 130, 0.1) !important;
+  color: #eaeaea !important;
+  background: rgba(234, 234, 234, 0.1) !important;
 }
 
 .border-ribbon {
-  border-color: #3c4f82 !important;
+  border-color: #eaeaea !important;
 }
 
 .bg-ribbon_text {
@@ -349,33 +349,13 @@
     @include page-width-centered();
   }
 */
-@-webkit-keyframes highlight {
-  0% {
-    background-color: transparent;
-  }
-  50% {
-    background-color: #ffdb67;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-@keyframes highlight {
-  0% {
-    background-color: transparent;
-  }
-  50% {
-    background-color: #ffdb67;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
 /* ======================================
    The grey ribbon at the top of the page
    ====================================== */
 .ribbon_bar {
-  background-color: #3c4f82 !important;
+  border-bottom: 1px solid #ccc;
+  background: white;
+  background: linear-gradient(180deg, white 0%, #eaeaea 80%, #e0e0e0 100%);
   position: relative;
   z-index: 501;
 }
@@ -403,15 +383,15 @@
   margin-left: 10px;
 }
 .ribbon_bar__content__login {
-  color: #ffffff;
+  color: #333333;
   font-size: 1.3rem;
 }
 .ribbon_bar__content__username {
   display: block;
-  color: #c8c8c8;
+  color: #333333;
 }
 .ribbon_bar__content__breadcrumbs .breadcrumb-item + .breadcrumb-item::before {
-  color: #ffffff;
+  color: #333333;
 }
 .ribbon_bar__content__breadcrumbs .breadcrumb-item.active a {
   pointer-events: auto !important;
@@ -426,28 +406,15 @@
 }
 
 /* ==================
-   Page Header
+   Page
    ================== */
-.page__header__logo {
-  width: 100px;
-  display: inline-block;
-}
-.page__header__logo img {
-  width: 100%;
-  height: auto;
-}
-.page__header__title a, .page__header__title a:visited {
-  color: #000000;
-  text-decoration: none;
-}
-
 .page {
-  flex: 1 0 auto;
+  display: flex;
 }
 .page__content {
-  margin-left: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  flex: 1 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .pagination .active a {
@@ -458,15 +425,16 @@
    Page Footer
    ================== */
 .footer {
-  background-color: #3c4f82;
-  font-size: 13px;
+  border-top: 1px solid #ccc;
+  background: #f4f4f4;
+  font-size: 0.8rem;
 }
 .footer__content__contact {
   line-height: 1.4;
-  color: #eee;
+  color: #333333;
 }
 .footer__content__contact a, .footer__content__contact a:visited {
-  color: #ff8b3f;
+  color: #333333;
 }
 .footer__content__links {
   margin: 0;

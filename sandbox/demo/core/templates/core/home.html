@@ -4,17 +4,700 @@
 {% block title %}{% trans 'Academy Theme Demo' %}{% endblock %}
 
 {% block content %}
-  <h2>Hello from Academy Theme Demo</h2>
+    <div class="row g-2 align-items-center mb-4">
+      <div class="col">
+        <h2 class="page-title">
+          Academy Theme
+        </h2>
+      </div>
+    </div>
 
-  <p class="introduction">
-    {% if user.is_authenticated %}
-      You are logged in as {{user}}.
-    {% else %}
-      You are not logged in.
-    {% endif %}
-  </p>
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Version {{ version }}</h3>
+    </div>
+    <div class="card-body">
+      <div class="datagrid">
+        <div class="datagrid-item">
+          <div class="datagrid-title">Wildewidgets Version</div>
+          <div class="datagrid-content">{{ wildewidgets_version }}</div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Tabler Version</div>
+          <div id="tabler-version" class="datagrid-content"></div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Bootstrap Icons Version</div>
+          <div id="bootstrap-icons-version" class="datagrid-content"></div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">jQuery version</div>
+          <div id="jquery-version" class="datagrid-content">–</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <p>
-    {{ mydata }}
-  </p>
+  <div class="card mt-4">
+    <div class="card-header">
+      <h3 class="card-title">Middle Earth at the start of the Fourth Age<h3>
+    </div>
+    <div class="card-body">
+      <div class="datagrid">
+        <div class="datagrid-item">
+          <div class="datagrid-title">Creator</div>
+          <div class="datagrid-content">
+            <div class="d-flex align-items-center">
+              <span class="avatar avatar-xs me-2 avatar-rounded" style="background-image: url({% static 'core/images/avatars/avatar11.jpg' %}); background-size: 1.5rem;"></span>
+              Eru Ilúvatar
+            </div>
+          </div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Age</div>
+          <div class="datagrid-content">56,960 years</div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Gandalf status</div>
+          <div class="datagrid-content">
+            <span class="status status-red">
+              Inactive
+            </span>
+          </div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Valar list</div>
+          <div class="datagrid-content">
+            <div class="avatar-list avatar-list-stacked">
+              <span class="avatar avatar-xs avatar-rounded" style="background-image: url({% static 'core/images/avatars/avatar2.jpg' %}); background-size: 1.5rem;"></span>
+              <span class="avatar avatar-xs avatar-rounded" style="background-image: url({% static 'core/images/avatars/avatar9.jpg' %}); background-size: 1.5rem;"></span>
+              <span class="avatar avatar-xs avatar-rounded" style="background-image: url({% static 'core/images/avatars/avatar3.jpg' %}); background-size: 1.5rem;"></span>
+              <span class="avatar avatar-xs avatar-rounded" style="background-image: url({% static 'core/images/avatars/avatar4.jpg' %}); background-size: 1.5rem;"></span>
+              <span class="avatar avatar-xs avatar-rounded" style="background-image: url({% static 'core/images/avatars/avatar5.jpg' %}); background-size: 1.5rem;"></span>
+              <span class="avatar avatar-xs avatar-rounded">+9</span>
+            </div>
+          </div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Checkbox</div>
+          <div class="datagrid-content">
+            <label class="form-check">
+              <input class="form-check-input" type="checkbox" checked="">
+              <span class="form-check-label">Ring destroyed</span>
+            </label>
+          </div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Icon</div>
+          <div class="datagrid-content">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l5 5l10 -10"></path></svg>
+            Sauron defeated
+          </div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Form control</div>
+          <div class="datagrid-content">
+            <input type="text" class="form-control form-control-flush" placeholder="Input placeholder">
+          </div>
+        </div>
+        <div class="datagrid-item">
+          <div class="datagrid-title">Longer description</div>
+          <div class="datagrid-content">
+            Po-tay-toes! Boil 'em, mash 'em, stick 'em in a stew.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cards mt-4">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="table-responsive">
+          <table class="table table-vcenter card-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Email</th>
+                <th>Species</th>
+                <th class="w-1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gandalf Grayhame</td>
+                <td class="text-muted">
+                  Wizard
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">olorin@valinor.gov</a></td>
+                <td class="text-muted">
+                  Wizard
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Aragorn, son or Arathorn</td>
+                <td class="text-muted">
+                  King
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">aragorn@arnor.org</a></td>
+                <td class="text-muted">
+                  Dunedain
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Boromir, son of Denethor</td>
+                <td class="text-muted">
+                  Man of Gondor
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">boromir@gondor.middlearth.gov</a></td>
+                <td class="text-muted">
+                  Man
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Gimli, son of Gloin</td>
+                <td class="text-muted">
+                  Geologist
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">gimli@moria.net</a></td>
+                <td class="text-muted">
+                  Dwarf
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Leoglas Greenleaf</td>
+                <td class="text-muted">
+                  Archer
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">legolas.greenleaf@mirkwood.gov</a></td>
+                <td class="text-muted">
+                  Wood Elf
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Frodo Baggins</td>
+                <td class="text-muted">
+                  Ring Bearer
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">fbaggins23@hotmail.com</a></td>
+                <td class="text-muted">
+                  Hobbit
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Samwise Gamgee</td>
+                <td class="text-muted">
+                  Assistant
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">sam.gamgee@shire.middleearth.org</a></td>
+                <td class="text-muted">
+                  Hobbit
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Peregrin Took</td>
+                <td class="text-muted">
+                  Tomfool of a Took
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">pip74@icloud.com</a></td>
+                <td class="text-muted">
+                  Hobbit
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Meriadoc Brandybuck</td>
+                <td class="text-muted">
+                  Squire of Rohan
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">merry34@icloud.com</a></td>
+                <td class="text-muted">
+                  Hobbit
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Words Spoken</h3>
+          <table class="table table-sm table-borderless">
+            <thead>
+              <tr>
+                <th>Character</th>
+                <th class="text-end">Words</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Most words spoken">
+                        <span class="visually-hidden">Most words spoken</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Gandalf</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">4794</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 52.67%" role="progressbar" aria-valuenow="52.67" aria-valuemin="0" aria-valuemax="100" aria-label="52.67% of Gandalf">
+                        <span class="visually-hidden">52.67% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Sam Gamgee</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">2525</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 48.49%" role="progressbar" aria-valuenow="48.49" aria-valuemin="0" aria-valuemax="100" aria-label="48.49% of Gandalf">
+                        <span class="visually-hidden">48.49% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Aragorn</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">2325</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 47.83%" role="progressbar" aria-valuenow="47.83" aria-valuemin="0" aria-valuemax="100" aria-label="47.89% of Gandalf">
+                        <span class="visually-hidden">47.83% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Frodo Baggins</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">2293</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 26.38%" role="progressbar" aria-valuenow="26.38" aria-valuemin="0" aria-valuemax="100" aria-label="26.38% of Gandalf">
+                        <span class="visually-hidden">26.38% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Gimli</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">1265</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 26.30%" role="progressbar" aria-valuenow="26.30" aria-valuemin="0" aria-valuemax="100" aria-label="26.30% of Ganalf">
+                        <span class="visually-hidden">26.30% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Pippin</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">1261</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 23.29%" role="progressbar" aria-valuenow="23.29" aria-valuemin="0" aria-valuemax="100" aria-label="23.29% of Gandalf">
+                        <span class="visually-hidden">26.30% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Merry</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">1117</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 22.86%" role="progressbar" aria-valuenow="22.86" aria-valuemin="0" aria-valuemax="100" aria-label="22.86% of Gandalf">
+                        <span class="visually-hidden">22.86% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Boromir</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">1096</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="progressbg">
+                    <div class="progress progressbg-progress">
+                      <div class="progress-bar bg-primary-lt" style="width: 14.39%" role="progressbar" aria-valuenow="14.39" aria-valuemin="0" aria-valuemax="100" aria-label="14.39% of Gandalf">
+                        <span class="visually-hidden">14.39% of Gandalf</span>
+                      </div>
+                    </div>
+                    <div class="progressbg-text">Legolas</div>
+                  </div>
+                </td>
+                <td class="w-1 fw-bold text-end">680</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card">
+        <div class="table-responsive">
+          <table class="table table-vcenter card-table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th class="w-1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gandalf Grayhame</td>
+                <td class="text-muted">
+                  Wizard, Disturber of the Peace
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">olorin@valinor.gov</a></td>
+                <td class="text-muted">
+                  Wizard
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Aragorn, son of Arathorn</td>
+                <td class="text-muted">
+                  Ranger, Heir of Isildur
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">aragorn@arnor.gov</a></td>
+                <td class="text-muted">
+                  Ranger
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Boromir, son of Denethor</td>
+                <td class="text-muted">
+                  Captain of Gondor
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">boromir@gondor.middlearth.gov</a></td>
+                <td class="text-muted">
+                  Fighter
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Gimli, son of Gloin</td>
+                <td class="text-muted">
+                  Axe Wielder, Galadriel Fan
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">gimli@moria.net</a></td>
+                <td class="text-muted">
+                  Dwarf
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Frodo Baggins</td>
+                <td class="text-muted">
+                  Ring Bearer
+                </td>
+                <td class="text-muted"><a href="#" class="text-reset">fbaggins23@hotmail.com</a></td>
+                <td class="text-muted">
+                  Hobbit
+                </td>
+                <td>
+                  <a href="#">Edit</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card">
+        <div class="table-responsive">
+          <table class="table table-vcenter table-mobile-md card-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Role</th>
+                <th class="w-1"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Name">
+                  <div class="d-flex py-1 align-items-center">
+                    <span class="avatar me-2" style="background-image: url({% static 'core/images/avatars/avatar1.jpg' %})"></span>
+                    <div class="flex-fill">
+                      <div class="font-weight-medium">Gandalf Grayhame</div>
+                      <div class="text-muted"><a href="#" class="text-reset">olorin@valinor.gov</a></div>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Title">
+                  <div>Istari</div>
+                  <div class="text-muted">Middle Earth (formerly, Valinor)</div>
+                </td>
+                <td class="text-muted" data-label="Role">
+                  Superuser
+                </td>
+                <td>
+                  <div class="btn-list flex-nowrap">
+                    <a href="#" class="btn">
+                      Edit
+                    </a>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">
+                        Actions
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">
+                          Action
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          Another action
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Name">
+                  <div class="d-flex py-1 align-items-center">
+                    <span class="avatar me-2" style="background-image: url({% static 'core/images/avatars/avatar6.jpg' %})"></span>
+                    <div class="flex-fill">
+                      <div class="font-weight-medium">Aragorn, son of Arathorn</div>
+                      <div class="text-muted"><a href="#" class="text-reset">aragorn@arnor.org</a></div>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Title">
+                  <div>Dunedain, Heir of Isildur</div>
+                  <div class="text-muted">Reconstructed Kingdom of Arnor</div>
+                </td>
+                <td class="text-muted" data-label="Role">
+                  Admin
+                </td>
+                <td>
+                  <div class="btn-list flex-nowrap">
+                    <a href="#" class="btn">
+                      Edit
+                    </a>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">
+                        Actions
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">
+                          Action
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          Another action
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Name">
+                  <div class="d-flex py-1 align-items-center">
+                    <span class="avatar me-2" style="background-image: url({% static 'core/images/avatars/avatar8.jpg' %})"></span>
+                    <div class="flex-fill">
+                      <div class="font-weight-medium">Boromir, son of Denethor</div>
+                      <div class="text-muted"><a href="#" class="text-reset">boromir@gondor.middlearth.gov</a></div>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Title">
+                  <div>Orc-slayer, Heir to stewardship of Gondor</div>
+                  <div class="text-muted">City of Minas Tirith, Gondor</div>
+                </td>
+                <td class="text-muted" data-label="Role">
+                  User
+                </td>
+                <td>
+                  <div class="btn-list flex-nowrap">
+                    <a href="#" class="btn">
+                      Edit
+                    </a>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">
+                        Actions
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">
+                          Action
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          Another action
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Name">
+                  <div class="d-flex py-1 align-items-center">
+                    <span class="avatar me-2" style="background-image: url({% static 'core/images/avatars/avatar10.jpg' %})"></span>
+                    <div class="flex-fill">
+                      <div class="font-weight-medium">Frodo Baggins</div>
+                      <div class="text-muted"><a href="#" class="text-reset">frodo23@hotmail.com</a></div>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Title">
+                  <div>Bearer of the One Ring</div>
+                  <div class="text-muted">Hobbiton, the Shire</div>
+                </td>
+                <td class="text-muted" data-label="Role">
+                  Owner
+                </td>
+                <td>
+                  <div class="btn-list flex-nowrap">
+                    <a href="#" class="btn">
+                      Edit
+                    </a>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">
+                        Actions
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">
+                          Action
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          Another action
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Name">
+                  <div class="d-flex py-1 align-items-center">
+                    <span class="avatar me-2" style="background-image: url({% static 'core/images/avatars/avatar3.jpg' %})"></span>
+                    <div class="flex-fill">
+                      <div class="font-weight-medium">Samwise Gamgee</div>
+                      <div class="text-muted"><a href="#" class="text-reset">sam.gamgee@shire.middlearth.org</a></div>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Title">
+                  <div>Assistant Ring Bearer</div>
+                  <div class="text-muted">Hobbiton, the Shire</div>
+                </td>
+                <td class="text-muted" data-label="Role">
+                  Admin
+                </td>
+                <td>
+                  <div class="btn-list flex-nowrap">
+                    <a href="#" class="btn">
+                      Edit
+                    </a>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">
+                        Actions
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">
+                          Action
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          Another action
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
 {% endblock %}
+
+{% block extra_footer_js %}
+<script>
+  function get_tabler_version() {
+    var parts = $("head > link[href*='tabler']").attr('href').split("/");
+    $("#tabler-version").text(parts[4].split('@')[1]);
+  }
+
+  function get_bootstrap_icons_version() {
+    var parts = $("head > link[href*='bootstrap-icons']").attr('href').split("/");
+    $("#bootstrap-icons-version").text(parts[4].split('@')[1]);
+  }
+
+  function get_jquery_version() {
+    var parts = $("head > script[src*='jquery']").attr('src').split("/");
+    $("#jquery-version").text(parts[3].split('-')[1].replace('.min.js', ''));
+  }
+
+  $(document).ready(function() {
+    get_tabler_version();
+    get_bootstrap_icons_version();
+    get_jquery_version();
+  });
+
+</script>
+{% endblock%}
