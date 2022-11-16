@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from book_manager import urls as bm_urls
 from wildewidgets import WildewidgetDispatch
 
 from .core import urls as core_urls
@@ -8,6 +9,7 @@ from .core import urls as core_urls
 
 urlpatterns = [
     path('', include(core_urls, namespace='core')),
+    path('wildewidgets', include(core_urls, namespace='core')),
     path('admin/', include(admin.site.urls[:2], namespace=admin.site.name)),
     path('wildewidgets_json', WildewidgetDispatch.as_view(), name='wildewidgets_json'),
 ]

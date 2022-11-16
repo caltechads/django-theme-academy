@@ -42,10 +42,11 @@ ENV PATH /ve/bin:$PATH
 # Install the latest pip and our dependencies into the virtualenv.  We do this
 # before copying the codebase so that minor code changes don't force a rebuild
 # of the entire virtualenv.
-COPY django-theme-academy.tar.gz /tmp/django-theme-academy.tar.gz
 COPY requirements.txt /tmp/requirements.txt
+COPY django-theme-academy.tar.gz /tmp/django-theme-academy.tar.gz
 RUN pip install --upgrade pip wheel && \
     pip install -r /tmp/requirements.txt && \
+    pip install /tmp/django-theme-academy.tar.gz && \
     # Purge the pip cache, which can save us a good few megabytes in the docker image.
     rm -rf `pip cache dir`
 

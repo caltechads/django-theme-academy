@@ -1,0 +1,29 @@
+<script>
+  function get_tabler_version() {
+    var parts = $("head > link[href*='tabler']").attr('href').split("/");
+    $("#tabler-version .datagrid-content").text(parts[4].split('@')[1]);
+  }
+
+  function get_bootstrap_icons_version() {
+    var parts = $("head > link[href*='bootstrap-icons']").attr('href').split("/");
+    $("#bootstrap-icons-version .datagrid-content").text(parts[4].split('@')[1]);
+  }
+
+  function get_jquery_version() {
+    var parts = $("head > script[src*='jquery']").attr('src').split("/");
+    $("#jquery-version .datagrid-content").text(parts[3].split('-')[1].replace('.min.js', ''));
+  }
+
+  function get_datatables_version() {
+    var parts = $("head > script[src*='datatables']").attr('src').split("/");
+    $("#datatables-version .datagrid-content").text(parts[3])
+  }
+
+  $(document).ready(function() {
+    get_tabler_version();
+    get_bootstrap_icons_version();
+    get_jquery_version();
+    get_datatables_version();
+  });
+
+</script>
