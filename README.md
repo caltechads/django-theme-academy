@@ -188,7 +188,7 @@ If you do need to add Javascript or CSS, create your own `base--wildewidgets.htm
 one and and overrides its blocks as needed.  Example:
 
 ```html
-{% extends 'academy_theme/base.html' %}
+{% extends 'academy_theme/base--wildewidgets.html' %}
 {% load static %}
 
 {% block extra_css %}
