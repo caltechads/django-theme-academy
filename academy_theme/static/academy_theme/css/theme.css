@@ -291,9 +291,6 @@
 :root {
   font-size: 18px !important;
 }
-:root table tr td a:not(.btn), :root table tr td a:not(.btn):hover, :root table tr td a:not(.btn):visited {
-  color: #D14900;
-}
 :root .form-control-plaintext {
   padding: 0.4375rem 0.75rem;
 }
@@ -401,10 +398,6 @@
   font-weight: bold;
 }
 
-.btn-primary {
-  background-color: #D14900 !important;
-}
-
 /* ==================
    Page
    ================== */
@@ -415,10 +408,6 @@
   flex: 1 0 auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.pagination .active a {
-  background-color: #D14900 !important;
 }
 
 /* ==================
