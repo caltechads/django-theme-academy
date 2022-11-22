@@ -137,3 +137,9 @@ $float_z:                 500;
   background-color: rgba(#f59f00, .3);
   border-radius: 20px;
 }
+
+pre {
+    background-color: #f8f8f8;
+    color: black;
+    border: 1px solid $color-ribbon_text;
+}

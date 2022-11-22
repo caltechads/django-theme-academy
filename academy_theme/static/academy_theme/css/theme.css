@@ -320,6 +320,11 @@
   border-radius: 20px;
 }
 
+pre {
+    background-color: #f8f8f8;
+    color: black;
+    border: 1px solid #CCCCCC;
+}
 /* ===================================================================
    Use these in your CSS via the SCSS mixin syntax.  Example:
 
