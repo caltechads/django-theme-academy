@@ -16,6 +16,10 @@
 
 {% block title %}{{page_title}}{% endblock %}
 
+{% block main_menu %}{% wildewidgets menu %}{% endblock %}
+
+{% block secondary_menu %}{% if submenu %}{% wildewidgets submenu %}{% endif %}{% endblock %}
+
 {% block breadcrumbs %}
   {% if breadcrumbs %}
     {% wildewidgets breadcrumbs %}
