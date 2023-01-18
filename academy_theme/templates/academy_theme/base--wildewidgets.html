@@ -2,6 +2,7 @@
 {% load wildewidgets static %}
 
 {% block extra_css %}
+  {{ block.super }}
   <link rel="stylesheet" href="{% static 'wildewidgets/css/table_extra.css' %}">
   <link rel="stylesheet" href="{% static 'wildewidgets/css/wildewidgets.css' %}">
   <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -9,6 +10,7 @@
 {% endblock %}
 
 {% block extra_header_js %}
+  {{ block.super }}
   <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
   <script src="https://cdn.datatables.net/plug-ins/1.10.21/sorting/datetime-moment.js"></script>
