@@ -356,7 +356,10 @@ ACADEMY_THEME_SETTINGS = {
     'ORGANIZATION_NAME': 'Academy Theme',
     'ORGANIZATION_ADDRESS': '123 Main Street, Everytown, ST',
     'COPYRIGHT_ORGANIZATION': 'Academy Theme',
-    'FOOTER_LINKS': []
+    'FOOTER_LINKS': [],
+
+    # Settings
+    'BODY_STYLE': 'left'
 }
 
 # django-xff

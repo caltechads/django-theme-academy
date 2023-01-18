@@ -28,7 +28,7 @@
   {% endblock %}
 </head>
 
-<body class="{% block body_classes %}{% endblock %}">
+<body class="{% block body_classes %}body--{{ BODY_STYLE }}{% endblock %}">
   {# The main menu in the left sidebar #}
   {% block main_menu %}{{menu}}{% endblock %}
 

@@ -22,5 +22,8 @@ def theme(request: HttpRequest) -> Dict[str, Any]:
         'ORGANIZATION_NAME': theme_settings.get('ORGANIZATION_NAME', 'Organization Name'),
         'ORGANIZATION_ADDRESS': theme_settings.get('ORGANIZATION_ADDRESS', 'Organization Address'),
         'COPYRIGHT_ORGANIZATION': theme_settings.get('COPYRIGHT_ORGANIZATION', 'Copyright Organization'),
-        'FOOTER_LINKS': theme_settings.get('FOOTER_LINKS', [])
+        'FOOTER_LINKS': theme_settings.get('FOOTER_LINKS', []),
+
+        # Settings
+        'BODY_STYLE': theme_settings.get('BODY_STYLE', 'centered')
     }

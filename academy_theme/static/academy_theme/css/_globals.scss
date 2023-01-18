@@ -143,3 +143,18 @@ pre {
     color: black;
     border: 1px solid $color-ribbon_text;
 }
+
+// Deal with our alternate body layouts
+.body {
+  &--left {
+    display: flex !important;
+    flex-direction: row !important;
+    .page {
+      padding-left: 0;
+      .page__content {
+        margin-left: 18rem;
+      }
+    }
+    .ribbon_bar__content__breadcrumbs { margin-left: 9rem; }
+  }
+}
