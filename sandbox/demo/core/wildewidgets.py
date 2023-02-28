@@ -7,7 +7,7 @@ from book_manager.wildewidgets import BookTableWidget
 from django.template.loader import render_to_string
 from django.urls import reverse
 from wildewidgets import (
-    BreadrumbBlock,
+    BreadcrumbBlock,
     CardWidget,
     Block,
     WidgetListLayoutHeader
@@ -29,7 +29,7 @@ class MainMenu(AcademyThemeMainMenu):
     ]
 
 
-class BaseBreadcrumbs(BreadrumbBlock):
+class BaseBreadcrumbs(BreadcrumbBlock):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
