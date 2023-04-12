@@ -151,7 +151,7 @@ class MainMenu(AcademyThemeMainMenu):
     ]
 
 
-class BaseBreadcrumbs(BreadrumbBlock):
+class BaseBreadcrumbs(BreadcrumbBlock):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.add_breadcrumb('Home', reverse('myapp:home'))
