@@ -1,4 +1,4 @@
-VERSION = 0.3.0
+VERSION = 0.3.3
 
 PACKAGE = academy_theme_demo
 
