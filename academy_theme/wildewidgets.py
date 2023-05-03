@@ -6,8 +6,8 @@ from django.templatetags.static import static
 
 from wildewidgets import (
     CardWidget,
+    Datagrid,
     VerticalDarkMenu,
-    Block
 )
 from wildewidgets import __version__ as wildewidgets_version
 
@@ -26,37 +26,6 @@ class AcademyThemeMainMenu(VerticalDarkMenu):
         ('Home', 'core:home'),
         ('Wildewidgets', 'core:wildewidgets')
     ]
-
-
-#------------------------------------------------------
-# Widgets
-#------------------------------------------------------
-
-class DatagridItem(Block):
-    block: str = 'datagrid-item'
-    title: str = None
-    content: str = None
-
-    def __init__(self, **kwargs):
-        self.title = kwargs.pop('title', None)
-        self.content = kwargs.pop('content', None)
-        super().__init__(**kwargs)
-        self.add_block(Block(self.title, name='datagrid-title'))
-        self.add_block(Block(self.content, name='datagrid-content'))
-
-
-class Datagrid(Block):
-    block: str = 'datagrid'
-
-    def add_item(self, title: str, content: str, **kwargs) -> None:
-        """
-        Add a :py:class:`DatagridItem` to contents.
-
-        Args:
-            title: the label for the item
-            content: the content of the item
-        """
-        self.add_block(DatagridItem(title=title, content=content, **kwargs))
 
 
 #------------------------------------------------------
