@@ -72,7 +72,7 @@
     {# Page Content #}
     <div class="page__content">
       <a id="main-content-anchor"></a>
-        <section class="page__content__inner {% block content_classes %}{% endblock %} {% if container_size %}{{container_size}}{% else %}container-fluid{% endif %}">
+        <section class="page__content__inner {% block content_classes %}{% endblock %} {% if container_size %}{{container_size}}{% else %}container-xl{% endif %}">
         {% block messages %}
           <div class="messages d-flex-column pl-0">
             {% for message in messages %}
