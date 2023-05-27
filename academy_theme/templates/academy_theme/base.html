@@ -46,7 +46,7 @@
 
     {# Ribbon #}
     <div class="ribbon_bar">
-      <div class="ribbon_bar__content container-fluid d-flex justify-content-between align-items-center">
+      <div class="ribbon_bar__content {% if container_size %}{{container_size}}{% else %}container-fluid{% endif %} d-flex justify-content-between align-items-center">
         <nav class="ribbon_bar__content__breadcrumbs d-none d-md-block">
           {% block breadcrumbs %}{% endblock %}
         </nav>
