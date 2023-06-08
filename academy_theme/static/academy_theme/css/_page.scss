@@ -33,9 +33,5 @@
         color: $color-black-text;
       }
     }
-
-    &__links {
-      @include all-caps-horizontal-links();
-    }
   }
 }

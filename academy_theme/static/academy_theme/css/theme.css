@@ -370,7 +370,6 @@ pre {
   font-size: 0.78571429em;
 }
 .ribbon_bar__content__links a, .ribbon_bar__content__links a:visited {
-  color: #ffffff !important;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -435,7 +434,6 @@ pre {
   font-size: 0.8em;
 }
 .footer__content__links a, .footer__content__links a:visited {
-  color: #ffffff !important;
   text-transform: uppercase;
   font-weight: bold;
 }
