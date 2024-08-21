@@ -5,16 +5,14 @@
   {{ block.super }}
   <link rel="stylesheet" href="{% static 'wildewidgets/css/table_extra.css' %}">
   <link rel="stylesheet" href="{% static 'wildewidgets/css/wildewidgets.css' %}">
-  <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-2.1.4/date-1.5.3/datatables.min.css">
   <link rel="stylesheet" href="{% static 'wildewidgets/css/highlighting.css' %}">
 {% endblock %}
 
 {% block extra_header_js %}
   {{ block.super }}
   <script src="{% static 'wildewidgets/js/wildewidgets.js' %}"></script>
-  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-  <script src="https://cdn.datatables.net/plug-ins/1.10.21/sorting/datetime-moment.js"></script>
+  <script src="https://cdn.datatables.net/v/dt/dt-2.1.4/date-1.5.3/datatables.min.js"></script>
 {% endblock %}
 
 {% block title %}{{page_title}}{% endblock %}
