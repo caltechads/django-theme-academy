@@ -27,7 +27,7 @@ copyright = '2022, Caltech IMSS ADS'  # pylint: disable=redefined-builtin
 author = 'Caltech IMSS ADS'
 
 # The full version, including alpha/beta/rc tags
-release = '0.3.10'
+release = '0.3.11'
 
 
 # -- General configuration ---------------------------------------------------
