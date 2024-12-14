@@ -54,7 +54,7 @@
         <ul class="ribbon_bar__content__links d-flex align-self-center">
           <li>
             {% if user.is_authenticated %}
-            <a title="Logout of your demo session." href="/auth/logout">
+            <a title="{{ LOGOUT_TITLE }}." href="{{ LOGOUT_LINK|safe }}">
               {% trans 'Logout' %}
             </a>
             {% endif %}

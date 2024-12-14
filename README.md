@@ -59,6 +59,8 @@ ACADEMY_THEME_SETTINGS = {
     'FAVICON_16': 'myapp/images/favicon-16x16.png',
     'FAVICON': 'myapp/images/favicon.ico',
     'SITE_WEBMANIFEST': 'myapp/images/site.webmanifest',
+    'LOGOUT_TITLE': 'Log out of this site',
+    'LOGOUT_LINK': '/my/logout/link'
 
     # Footer
     'ORGANIZATION_LINK': 'https://myorg.com',
