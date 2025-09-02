@@ -138,7 +138,7 @@ from academy_theme.wildewidgets import AcademyThemeMainMenu
 from django.templatetags.static import static
 from wildewidgets import (
     BasicMenu,
-    BreadcrumbBlock
+    BreadcrumbBlock,
     CardWidget,
     MenuMixin,
     StandardWidgetMixin,
