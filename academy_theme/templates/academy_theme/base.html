@@ -36,7 +36,7 @@
 
 <body class="{% block body_classes %}body--{{ BODY_STYLE }}{% endblock %}">
   {# The main menu in the left sidebar #}
-  {% block main_menu %}{{menu}}{% endblock %}
+  {% if menu %}{% block main_menu %}{{menu}}{% endblock %}{% endif %}
 
   <div class="sr-only visually-hidden visually-hidden-focusable">
     <a href="#main-content-anchor">{% trans 'Skip to main content' %}</a>
